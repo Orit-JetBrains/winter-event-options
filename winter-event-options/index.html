@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winter Team Event — Vote for an Option 🗳️</title>
+<style>
+  :root{
+    --bg:#0f1420; --card:#1a2230; --ink:#eef2f8; --muted:#9fb0c6;
+    --line:#2a3647; --accent:#5bd1a6; --accent2:#7aa2ff; --warn:#ffcf6b;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f4f6fb; --card:#ffffff; --ink:#172031; --muted:#5a6b82;
+      --line:#e2e8f2; --accent:#1aa06f; --accent2:#2f6bff; --warn:#b8791a; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 18px 60px}
+  header h1{font-size:30px;margin:0 0 6px}
+  header p{color:var(--muted);margin:4px 0}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 6px}
+  .chip{background:var(--card);border:1px solid var(--line);border-radius:999px;
+    padding:5px 12px;font-size:13px;color:var(--muted)}
+  .howto{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+    border-radius:12px;padding:14px 16px;margin:18px 0 8px}
+  .howto b{color:var(--accent)}
+  table.cmp{width:100%;border-collapse:collapse;margin:18px 0 10px;font-size:14px;
+    background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  table.cmp th,table.cmp td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:left}
+  table.cmp th{background:rgba(127,162,255,.12);color:var(--ink);font-weight:600}
+  table.cmp tr:last-child td{border-bottom:none}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:22px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    display:flex;flex-direction:column}
+  .banner{position:relative;height:180px;display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(135deg,var(--accent2),var(--accent));font-size:64px}
+  .banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .card .body{padding:16px 18px 20px}
+  .card h2{margin:0 0 2px;font-size:20px}
+  .tag{color:var(--muted);font-size:13px;margin:0 0 10px}
+  .card ul{margin:8px 0 10px;padding-left:18px}
+  .card li{margin:3px 0}
+  .kv{margin:10px 0;font-size:14px}
+  .kv div{margin:3px 0}
+  .ok{color:var(--accent)} .warn{color:var(--warn)}
+  .links a{display:inline-block;margin:3px 8px 3px 0;font-size:13px;color:var(--accent2);text-decoration:none}
+  .links a:hover{text-decoration:underline}
+  .vote{margin-top:12px;font-weight:600;color:var(--ink);border-top:1px dashed var(--line);padding-top:10px}
+  footer{color:var(--muted);font-size:13px;margin-top:34px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🗳️ Winter Team Event — Pick Our Day Out</h1>
+    <p>Twelve options below. Same ground rules for all:</p>
+    <div class="meta">
+      <span class="chip">📅 A weekday in November</span>
+      <span class="chip">👥 ~7 people</span>
+      <span class="chip">💰 ~€130 pp (activity + meal)</span>
+      <span class="chip">✡️ Kosher</span>
+      <span class="chip">🚆 Public transport (except Options 4, 6, 7, 11 &amp; 12)</span>
+    </div>
+  </header>
+
+  <div class="howto">
+    <b>How to vote:</b> reply in the team channel with your ranked top&nbsp;2
+    (e.g. “1️⃣ Akko, 2️⃣ Zichron”). Deadline: <i>add date</i>. Questions/dietary notes welcome —
+    a couple of options have confirmations still to make.
+  </div>
+
+  <table class="cmp">
+    <tr><th>Option</th><th>Transport</th><th>Kosher meal</th><th>Vibe</th></tr>
+    <tr><td>1 · Haifa — Carmelit + Baha'i</td><td>✅ Train + Carmelit</td><td>⚠️ Dairy only (Terrace)</td><td>Iconic gardens + funicular</td></tr>
+    <tr><td>2 · Akko Old City</td><td>✅ Direct train + bus</td><td>✅ Meat (Roots)</td><td>UNESCO Crusader old city</td></tr>
+    <tr><td>3 · Zichron Yaakov</td><td>⚠️ Train + bus 70</td><td>✅ Meat (HaMeyasdim 16)</td><td>Charming wine-country town</td></tr>
+    <tr><td>4 · Emek HaEla — Rangers + wine/beer</td><td>🚗 By car</td><td>✅ Kosher: Burger Road (meat), Café Li-On (dairy), winery picnics</td><td>Off-road adventure + tasting</td></tr>
+    <tr><td>5 · Tel Aviv — cooking / cocktail workshop</td><td>✅ Central (train + bus)</td><td>✅ Kosher (meal built in)</td><td>Hands-on fun, indoor</td></tr>
+    <tr><td>6 · Emek HaHula — golf carts + cranes</td><td>🚗 By car (far north)</td><td>✅ Kosher meat: Pina BaRosh / Eretz Canaan</td><td>Crane migration by golf cart</td></tr>
+    <tr><td>7 · Caesarea — seaside Roman ruins</td><td>🚗 By car</td><td>✅ Kosher meat+fish (Crusaders, harbour view)</td><td>Roman/Crusader ruins + harbour</td></tr>
+    <tr><td>8 · Jerusalem — Machane Yehuda shuk</td><td>✅ Fast train + light rail</td><td>✅✅ Kosher everywhere</td><td>Chef workshop / food tour</td></tr>
+    <tr><td>9 · Jaffa — old city + flea market</td><td>✅ Central (train + light rail)</td><td>✅ Kosher (pick certified)</td><td>Seaside old city wander</td></tr>
+    <tr><td>10 · Tel Aviv — Florentin graffiti workshop</td><td>✅ Central</td><td>✅ Kosher nearby</td><td>Spray-paint street-art fun</td></tr>
+    <tr><td>11 · Beit Guvrin — "Dig for a Day"</td><td>🚗 By car</td><td>⚠️ Kosher ~15 min (Srigim)</td><td>Real archaeological dig</td></tr>
+    <tr><td>12 · Ein Gedi + Dead Sea</td><td>🚗 By car</td><td>✅ Kosher (Kibbutz Ein Gedi)</td><td>Desert oasis + Dead Sea float</td></tr>
+  </table>
+
+  <div class="grid">
+
+    <!-- Option 1 -->
+    <div class="card">
+      <div class="banner">🌿
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/TerracesBenGurion2.jpg/960px-TerracesBenGurion2.jpg"
+             alt="Baha'i Gardens, Haifa" onerror="this.style.display='none'">
+      </div>
+      <div class="body">
+        <h2>1 · Haifa: Carmelit + Baha'i Gardens</h2>
+        <p class="tag">Israel's only subway + the UNESCO Baha'i Gardens, ending in the German Colony.</p>
+        <ul>
+          <li>🚇 <b>Carmelit</b> funicular up Mount Carmel (~8 min, 5.90&nbsp;NIS)</li>
+          <li>🌸 Free guided <b>Baha'i Gardens</b> tour (English 10:00, descends 750 steps)</li>
+          <li>🏙️ German Colony + afternoon in the port / Turkish Market / Wadi Nisnas</li>
+        </ul>
+        <div class="kv">
+          <div><span class="ok">Transport ✅</span> Train + Carmelit</div>
+          <div><span class="warn">Meal ⚠️</span> <b>Terrace</b> — kosher-<b>dairy</b> (no good kosher meat nearby)</div>
+          <div><span class="ok">Cost ✅</span> Tour free → budget goes to the meal</div>
+          <div>📅 Sun/Tue/Wed/Thu (gardens closed Mon)</div>
+        </div>
+        <div class="links">
+          <a href="https://www.booking.ganbahai.org.il/service-page/English-tour-Yefe-Nof-St">Book the tour</a>
+          <a href="https://www.carmelithaifa.com/traveling-in-haifa/public-transportation/">Carmelit</a>
+          <a href="https://www.botanicahotel.co.il/restaurant">Terrace</a>
+        </div>
+        <div class="vote">👍 Vote: “Option 1 — Haifa”</div>
+      </div>
+    </div>
+
+    <!-- Option 2 -->
+    <div class="card">
+      <div class="banner">⚓
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Acre_-_Akko_6_-_the_fishing_port_%286658890981%29.jpg/960px-Acre_-_Akko_6_-_the_fishing_port_%286658890981%29.jpg"
+             alt="Akko old city and port" onerror="this.style.display='none'">
+      </div>
+      <div class="body">
+        <h2>2 · Akko (Acre) Old City</h2>
+        <p class="tag">Compact, walkable UNESCO old city by the sea — and a kosher meat lunch inside a Crusader hall.</p>
+        <ul>
+          <li>🏰 Hospitaller <b>Knights' Halls</b>, <b>Templar Tunnel</b>, Al-Jazzar Mosque</li>
+          <li>🛍️ Turkish Bazaar, Khan al-Umdan, sea walls & fishing port</li>
+          <li>🎟️ “Enchanted Akko” combo ticket; optional guided tour</li>
+        </ul>
+        <div class="kv">
+          <div><span class="ok">Transport ✅</span> Direct train + bus 3A/4 (~10 min)</div>
+          <div><span class="ok">Meal ✅ (meat)</span> <b>Roots</b> — kosher meat in the Knights' Halls courtyard</div>
+          <div><span class="ok">Cost ✅</span> Ticket + meal within budget</div>
+          <div>📅 Any weekday (Roots closed Fri–Sat)</div>
+        </div>
+        <div class="links">
+          <a href="https://www.akko.org.il/en/">Old Akko</a>
+          <a href="https://rsrv.rest/en/akko/place/Roots-Akko">Roots (kosher meat)</a>
+          <a href="https://akkoinfo.westgalil.org.il/en/article/directions-jnf-usa-western-galilee-information-center/">Getting there</a>
+        </div>
+        <div class="vote">👍 Vote: “Option 2 — Akko”</div>
+      </div>
+    </div>
+
+    <!-- Option 3 -->
+    <div class="card">
+      <div class="banner">🍷
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/PikiWiki_Israel_73640_glider_photo_of_zichron_yaacov.jpg/960px-PikiWiki_Israel_73640_glider_photo_of_zichron_yaacov.jpg"
+             alt="Zichron Yaakov" onerror="this.style.display='none'">
+      </div>
+      <div class="body">
+        <h2>3 · Zichron Yaakov</h2>
+        <p class="tag">Charming hilltop wine-country town — pretty pedestrian street, history, wineries + a chef kosher meat restaurant.</p>
+        <ul>
+          <li>🚶 <b>Midrachov</b> (1882 pioneer houses), First Aliyah Museum, Nili House</li>
+          <li>🍇 <b>Carmel Winery</b> tour; optional Tishbi/Binyamina tasting en route</li>
+          <li>🌿 Ramat HaNadiv (Rothschild) gardens</li>
+        </ul>
+        <div class="kv">
+          <div><span class="warn">Transport ⚠️</span> Train → Binyamina → bus 70 (~7 min)</div>
+          <div><span class="ok">Meal ✅ (meat)</span> <b>HaMeyasdim 16</b> — chef kosher meat, sea-view heated terrace</div>
+          <div><span class="ok">Cost ✅</span> Museums/winery + meal within budget</div>
+          <div>📅 Sun–Thu (restaurant closed Fri–Sat)</div>
+        </div>
+        <div class="links">
+          <a href="https://hameyasdim16.co.il/">HaMeyasdim 16</a>
+          <a href="https://www.visit-zichronyaakov.co.il/category/culinary/?lang=en">Visit Zichron</a>
+          <a href="https://www.rome2rio.com/s/Binyamina-Station/Zikhron-Ya-aqov">Getting there</a>
+        </div>
+        <div class="vote">👍 Vote: “Option 3 — Zichron”</div>
+      </div>
+    </div>
+
+    <!-- Option 4 -->
+    <div class="card">
+      <div class="banner">🚜
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Valley_of_Elah_from_Tel_Azeka.jpg/960px-Valley_of_Elah_from_Tel_Azeka.jpg"
+             alt="Valley of Elah" onerror="this.style.display='none'">
+      </div>
+      <div class="body">
+        <h2>4 · Emek HaEla: Rangers + Wine / Beer</h2>
+        <p class="tag">The active one — off-road ranger/jeep tour in the David-vs-Goliath valley, plus wine or craft-beer tasting. 🚗 We'd drive.</p>
+        <ul>
+          <li>🚜 <b>Off-road ranger/jeep tour</b> (+ optional team-building / ODT)</li>
+          <li>🍷 Kosher wineries: Ella Valley (serves food), Tzora, Teperberg — tours & tastings</li>
+          <li>🍺 <b>Srigim Brewery</b> beer garden (⚠️ not kosher — kosher cafés next door)</li>
+        </ul>
+        <div class="kv">
+          <div>🚗 <b>Transport</b> By car (not reliant on public transport)</div>
+          <div><span class="ok">Meal ✅</span> Kosher: <b>Burger Road</b> (meat), <b>Café Li-On</b> (dairy), <b>Ella Valley</b> picnics</div>
+          <div><span class="warn">Cost ⚠️</span> Off-road ~175–300 NIS pp (1–2 hr); half-day RZR blows the budget</div>
+          <div>📅 Winery tastings Sun–Thu</div>
+        </div>
+        <div class="links">
+          <a href="https://modiinapp.com/en/page/7950/hidden-valley-tours-jeep-tours-guided-experiences">Off-road tours</a>
+          <a href="https://www.ellavalleywines.com/">Ella Valley Winery</a>
+          <a href="https://www.burgeroad.co.il/">Burger Road (kosher meat)</a>
+          <a href="https://culinar.co.il/dt_places/%D7%9E%D7%91%D7%A9%D7%9C%D7%AA-%D7%A9%D7%A8%D7%99%D7%92%D7%99%D7%9D/">Café Li-On (kosher dairy)</a>
+        </div>
+        <div class="vote">👍 Vote: “Option 4 — Emek HaEla”</div>
+      </div>
+    </div>
+
+    <!-- Option 5 -->
+    <div class="card">
+      <div class="banner">🍴
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Sarona_CBD_01_%28cropped%29.jpg/960px-Sarona_CBD_01_%28cropped%29.jpg"
+             alt="Tel Aviv" onerror="this.style.display='none'">
+      </div>
+      <div class="body">
+        <h2>5 · Tel Aviv: Cooking / Cocktail Workshop</h2>
+        <p class="tag">Central, weather-proof, all-in-one fun — a hands-on kosher cooking or cocktail workshop. (No yacht! 🚫⛵)</p>
+        <ul>
+          <li>🔪 "Knife Fight" / Classic cooking class — chef-guided, competitive</li>
+          <li>🛒 "Shuk &amp; Cook" — teams shop the market, then cook; or 🍸 Cocktail Class</li>
+          <li>🍽️ Finish with a 7–10 course meal + unlimited wine &amp; beer</li>
+        </ul>
+        <div class="kv">
+          <div><span class="ok">Transport ✅</span> Central Tel Aviv — best for everyone</div>
+          <div><span class="ok">Meal ✅</span> Kosher (Tel Aviv Rabbinate) — built into the workshop</div>
+          <div><span class="ok">Cost ✅</span> ~280 NIS + VAT pp all-in (well within budget)</div>
+          <div>📅 Any weekday (indoor)</div>
+        </div>
+        <div class="links">
+          <a href="https://en.bishulon.co.il/private-events">Cooking Studio — events</a>
+          <a href="https://www.bishulon.co.il/en/">Classes</a>
+        </div>
+        <div class="vote">👍 Vote: “Option 5 — Tel Aviv”</div>
+      </div>
+    </div>
+
+    <!-- Option 6 -->
+    <div class="card">
+      <div class="banner">🛺
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/View_of_Agamon_Hula.JPG/960px-View_of_Agamon_Hula.JPG"
+             alt="Agamon HaHula" onerror="this.style.display='none'">
+      </div>
+      <div class="body">
+        <h2>6 · Emek HaHula: Golf Carts + Cranes</h2>
+        <p class="tag">Tour the Hula Lake Park by golf cart during November's spectacular crane migration. 🚗 We'd drive north.</p>
+        <ul>
+          <li>🛺 Golf-cart loop of the park (bikes / pedal carts too)</li>
+          <li>🦢 ~35,000 cranes — November is peak; best at dawn/sunset</li>
+          <li>🌿 Easygoing flat wetland scenery, very photogenic</li>
+        </ul>
+        <div class="kv">
+          <div>🚗 <b>Transport</b> By car — far Upper Galilee (~2.5–3 hrs)</div>
+          <div><span class="ok">Meal ✅</span> Kosher meat nearby: Pina BaRosh (Hula view), Eretz Canaan (groups), Amigos</div>
+          <div><span class="ok">Cost ✅</span> Golf cart ~60 NIS pp + entry + meal — within budget</div>
+          <div>📅 Weekday; dawn/late-afternoon for the birds</div>
+        </div>
+        <div class="links">
+          <a href="https://www.kkl-jnf.org/tourism-and-recreation/forests-and-parks/hula-lake-park/">Hula Lake Park</a>
+          <a href="https://www.israel-in-photos.com/agamon-hula.html">Prices &amp; timing</a>
+        </div>
+        <div class="vote">👍 Vote: “Option 6 — Emek HaHula”</div>
+      </div>
+    </div>
+
+    <!-- Option 7 -->
+    <div class="card">
+      <div class="banner">🏛️
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Caesarea.JPG/960px-Caesarea.JPG"
+             alt="Caesarea" onerror="this.style.display='none'">
+      </div>
+      <div class="body">
+        <h2>7 · Caesarea</h2>
+        <p class="tag">Stunning seaside Roman &amp; Crusader ruins with kosher harbour dining. 🚗 We'd drive (easy by car).</p>
+        <ul>
+          <li>🏟️ Roman theatre &amp; hippodrome, Herod's seaside palace</li>
+          <li>🏰 Crusader fortress &amp; port; 🌊 aqueduct beach</li>
+          <li>🖼️ Harbour galleries + optional guided tour</li>
+        </ul>
+        <div class="kv">
+          <div>🚗 <b>Transport</b> By car — easy (~45 min Tel Aviv / 40 min Haifa); poor by PT</div>
+          <div><span class="ok">Meal ✅</span> <b>The Crusaders</b> — kosher meat+fish on the harbour (dairy: Aresto / Port Café)</div>
+          <div><span class="ok">Cost ✅</span> Park entry ~₪40–50 + meal — within budget</div>
+          <div>📅 Any weekday (park open daily)</div>
+        </div>
+        <div class="links">
+          <a href="https://www.caesarea.com/en/">Caesarea National Park</a>
+          <a href="https://www.tripadvisor.com/Restaurant_Review-g297742-d3588908-Reviews-Crusaders_Restaurant-Caesarea_Haifa_District.html">The Crusaders (kosher)</a>
+        </div>
+        <div class="vote">👍 Vote: “Option 7 — Caesarea”</div>
+      </div>
+    </div>
+
+    <!-- Option 8 -->
+    <div class="card">
+      <div class="banner">🥘
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Mahane_Yehuda_%28I%29_%2845298221191%29.jpg/960px-Mahane_Yehuda_%28I%29_%2845298221191%29.jpg"
+             alt="Mahane Yehuda Market" onerror="this.style.display='none'">
+      </div>
+      <div class="body">
+        <h2>8 · Jerusalem: Machane Yehuda (the Shuk)</h2>
+        <p class="tag">Food-forward &amp; kosher-rich — a chef cooking workshop or tasting tour in Jerusalem's market.</p>
+        <ul>
+          <li>👨‍🍳 Cooking workshop — shop the shuk with a chef, then cook &amp; eat</li>
+          <li>🧆 Or a kosher tasting tour across certified vendors</li>
+          <li>🏛️ Add the Old City / Tower of David</li>
+        </ul>
+        <div class="kv">
+          <div><span class="ok">Transport ✅✅</span> Fast train (~30 min) + light rail</div>
+          <div><span class="ok">Meal ✅✅</span> Kosher everywhere (Harry's Baked, Giraffa)</div>
+          <div><span class="ok">Cost ✅</span> ~₪280–480 pp</div>
+          <div>📅 Sun–Thu</div>
+        </div>
+        <div class="links">
+          <a href="https://www.touristisrael.com/tours/jerusalem-machane-yehuda-market-tour-cooking-workshop/">Workshop + tour</a>
+          <a href="https://harrysbaked.com/mahane-yehuda-market-food-tour/">Harry's Baked (kosher)</a>
+        </div>
+        <div class="vote">👍 Vote: “Option 8 — Jerusalem”</div>
+      </div>
+    </div>
+
+    <!-- Option 9 -->
+    <div class="card">
+      <div class="banner">🧭
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/ISR-2013-Aerial-Jaffa-Port_of_Jaffa.jpg/960px-ISR-2013-Aerial-Jaffa-Port_of_Jaffa.jpg"
+             alt="Old Jaffa" onerror="this.style.display='none'">
+      </div>
+      <div class="body">
+        <h2>9 · Jaffa: Old City + Flea Market</h2>
+        <p class="tag">Atmospheric seaside old city + buzzing flea market — central, easy, with a kosher meal.</p>
+        <ul>
+          <li>🕌 Old Jaffa alleys, port &amp; Clock Tower</li>
+          <li>🛍️ Shuk HaPishpeshim (flea market), lively Sun–Thu</li>
+          <li>🎨 Galleries + optional guided/food tour</li>
+        </ul>
+        <div class="kv">
+          <div><span class="ok">Transport ✅✅</span> Central TLV — train + Red Line light rail</div>
+          <div><span class="ok">Meal ✅</span> Kosher: Hummus Danny, Goshen, Uno (pick certified)</div>
+          <div><span class="ok">Cost ✅</span> Tour + meal within budget</div>
+          <div>📅 Sun–Thu</div>
+        </div>
+        <div class="links">
+          <a href="https://jamiegeller.com/travel/israel/jaffa-where-ancient-meets-modern-a-kosher-travelers-guide/">Kosher Jaffa guide</a>
+          <a href="https://www.tripadvisor.com/Attraction_Review-g297749-d324039-Reviews-Jaffa_Flea_Market-Jaffa_Tel_Aviv_Tel_Aviv_District.html">Flea market</a>
+        </div>
+        <div class="vote">👍 Vote: “Option 9 — Jaffa”</div>
+      </div>
+    </div>
+
+    <!-- Option 10 -->
+    <div class="card">
+      <div class="banner">🎨
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Florentin0013.JPG/960px-Florentin0013.JPG"
+             alt="Florentin, Tel Aviv" onerror="this.style.display='none'">
+      </div>
+      <div class="body">
+        <h2>10 · Tel Aviv: Florentin Graffiti Workshop</h2>
+        <p class="tag">Creative &amp; hands-on — a street-art walk, then spray your own piece. Central &amp; lively.</p>
+        <ul>
+          <li>🖌️ Graffiti workshop with a street artist (keep a souvenir)</li>
+          <li>🧱 Florentin murals &amp; café scene</li>
+          <li>🤝 Great team energy</li>
+        </ul>
+        <div class="kv">
+          <div><span class="ok">Transport ✅✅</span> Central Tel Aviv</div>
+          <div><span class="ok">Meal ✅</span> Kosher venue nearby (pre-book)</div>
+          <div><span class="ok">Cost ✅</span> Workshop ~300 NIS pp + meal</div>
+          <div>📅 Any weekday (outdoor walk portion)</div>
+        </div>
+        <div class="links">
+          <a href="https://www.streetartpartner.com/products/tel-aviv-graffiti-workshop">Graffiti workshop</a>
+          <a href="https://grafitiyul.co.il/en/product/graffiti-tour-in-florentine-tel-aviv/">Grafitiyul</a>
+        </div>
+        <div class="vote">👍 Vote: “Option 10 — Florentin”</div>
+      </div>
+    </div>
+
+    <!-- Option 11 -->
+    <div class="card">
+      <div class="banner">🏺
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Beit_Guvrin_1.JPG/960px-Beit_Guvrin_1.JPG"
+             alt="Beit Guvrin bell cave" onerror="this.style.display='none'">
+      </div>
+      <div class="body">
+        <h2>11 · Beit Guvrin: "Dig for a Day"</h2>
+        <p class="tag">The most unique team activity — take part in a real archaeological dig in the ancient caves. 🚗 By car.</p>
+        <ul>
+          <li>⛏️ Authentic dig (IAA-licensed), ~2.5–3 hrs, guided</li>
+          <li>🕳️ Explore the famous bell caves</li>
+          <li>🏺 Memorable &amp; genuinely different</li>
+        </ul>
+        <div class="kv">
+          <div>🚗 <b>Transport</b> By car — no public transport to site (~1 hr TLV)</div>
+          <div><span class="warn">Meal ⚠️</span> Kosher ~15 min in Srigim (Burger Road / Café Li-On)</div>
+          <div><span class="ok">Cost ✅</span> Dig ₪95 pp + park ₪28 — very cheap</div>
+          <div>📅 Sun–Fri (book ahead)</div>
+        </div>
+        <div class="links">
+          <a href="https://www.digforaday.com/">Dig for a Day</a>
+          <a href="https://www.burgeroad.co.il/">Kosher meat nearby</a>
+        </div>
+        <div class="vote">👍 Vote: “Option 11 — Beit Guvrin”</div>
+      </div>
+    </div>
+
+    <!-- Option 12 -->
+    <div class="card">
+      <div class="banner">🏜️
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/2010-06-18_09-30-17_Israel_Ejn_Gedi_JH_%2852783702009%29.jpg/960px-2010-06-18_09-30-17_Israel_Ejn_Gedi_JH_%2852783702009%29.jpg"
+             alt="David Falls, Ein Gedi" onerror="this.style.display='none'">
+      </div>
+      <div class="body">
+        <h2>12 · Ein Gedi + Dead Sea</h2>
+        <p class="tag">Desert oasis walk + a Dead Sea float — relaxing, photogenic, warm in November. 🚗 By car.</p>
+        <ul>
+          <li>💧 Ein Gedi Nature Reserve — waterfalls, springs, ibex</li>
+          <li>🧖 Dead Sea float + optional spa</li>
+          <li>☀️ Warm November weather</li>
+        </ul>
+        <div class="kv">
+          <div>🚗 <b>Transport</b> By car (Road 90, ~2 hrs TLV)</div>
+          <div><span class="ok">Meal ✅</span> Kosher buffet at Kibbutz Ein Gedi; Asado BaMidbar (meat)</div>
+          <div><span class="ok">Cost ✅</span> Reserve ~₪26 pp + meal</div>
+          <div>📅 Open 08:00–16:00 (start early!)</div>
+        </div>
+        <div class="links">
+          <a href="https://en.parks.org.il/reserve-park/en-gedi-nature-reserve/">Ein Gedi Reserve</a>
+          <a href="https://www.israel.com/places/dead-sea/restaurants">Kosher dining</a>
+        </div>
+        <div class="vote">👍 Vote: “Option 12 — Ein Gedi”</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Photos: Wikimedia Commons. Prices/opening hours are indicative — a few items still to be confirmed before booking.
+  </footer>
+</div>
+</body>
+</html>
