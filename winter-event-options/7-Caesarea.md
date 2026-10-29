@@ -13,8 +13,8 @@ Drive to **Caesarea National Park** → explore the Roman theatre, Herod's palac
 - 🏰 **Crusader fortress & port**, moat and gate
 - 🌊 **Aqueduct Beach** — the photogenic Roman aqueduct on the sand
 - 🖼️ Harbour **shops, galleries** + an optional guided tour / multimedia "Caesarea Experience"
-- ⛳ **Caesarea Golf Club** — Israel's only 18-hole championship course (Pete Dye redesign); group outings & lessons
-- 💆 **Spa** at the adjacent **Dan Caesarea** resort (pool, spa, landscaped gardens)
+
+*(Golf & spa at Caesarea = separate **Option 13** — it's a premium, likely over-budget day.)*
 
 ## Kosher meal ✅ (meat + fish, harbour view)
 - **The Crusaders Restaurant (Hatzel-Banim)** — kosher **meat & fish**, **Badatz Beit Yosef**, 55+ years on the ancient harbour with the **best sea views**; Sun–Thu ~11:00–23:00. (Dairy alternatives on the harbour: **Aresto** and **Port Café**.)
@@ -24,7 +24,6 @@ Drive to **Caesarea National Park** → explore the Roman theatre, Herod's palac
 - **Transport:** 🚗 **By car** — easy (~45 min from Tel Aviv, ~40 min from Haifa). ⚠️ By public transport it's awkward: train to **Binyamina** + the **infrequent (~hourly) bus #80** — so car is the way.
 - **Weekday:** park open daily; good any weekday.
 - **Cost:** park entry (~₪40–50) + kosher meal → within ~€130 pp.
-- ⚠️ **Golf/spa = premium add-on:** green fees **~₪480–540 pp** (buggy extra) — roughly the whole €130 budget on their own; a spa day pass is extra. The ruins + harbour meal stay within budget; a golf or spa day pushes it higher.
 
 ## Pros / Cons
 - ✅ Spectacular **seaside ruins** + a kosher **meat/fish** meal with harbour views; easy & quick **by car**; pleasant coastal November weather.
