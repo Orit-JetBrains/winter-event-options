@@ -47,6 +47,14 @@
   .links a{display:inline-block;margin:3px 8px 3px 0;font-size:13px;color:var(--accent2);text-decoration:none}
   .links a:hover{text-decoration:underline}
   .vote{margin-top:12px;font-weight:600;color:var(--ink);border-top:1px dashed var(--line);padding-top:10px}
+  details.sched{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+  details.sched summary{cursor:pointer;font-weight:600;color:var(--accent2);font-size:14px;list-style:none}
+  details.sched summary::-webkit-details-marker{display:none}
+  details.sched summary::before{content:"▸ "}
+  details.sched[open] summary::before{content:"▾ "}
+  .sched .row{display:flex;gap:10px;font-size:13px;margin:5px 0}
+  .sched .row b{color:var(--muted);min-width:62px;flex:0 0 auto;font-weight:600}
+  .sched .note{font-size:12px;color:var(--muted);margin-top:8px;font-style:italic}
   footer{color:var(--muted);font-size:13px;margin-top:34px;text-align:center}
 </style>
 </head>
@@ -113,6 +121,18 @@
           <a href="https://www.carmelithaifa.com/traveling-in-haifa/public-transportation/">Carmelit</a>
           <a href="https://www.botanicahotel.co.il/restaurant">Terrace</a>
         </div>
+        <details class="sched">
+          <summary>📋 Read more — sample day schedule</summary>
+          <div class="row"><b>07:45</b> Train from Tel Aviv area → Haifa (~1 hr)</div>
+          <div class="row"><b>09:20</b> Carmelit funicular up to Carmel Center</div>
+          <div class="row"><b>09:45</b> Louis Promenade + check in (45 Yefe Nof)</div>
+          <div class="row"><b>10:00</b> Baha'i Gardens guided tour (English) — descends</div>
+          <div class="row"><b>11:00</b> German Colony stroll (Ben-Gurion Blvd)</div>
+          <div class="row"><b>12:00</b> Lunch at Terrace</div>
+          <div class="row"><b>13:30</b> Port / Turkish Market / Wadi Nisnas</div>
+          <div class="row"><b>~16:00</b> Train home</div>
+          <div class="note">Sun/Tue/Wed/Thu — gardens closed Monday.</div>
+        </details>
         <div class="vote">👍 Vote: “Option 1 — Haifa”</div>
       </div>
     </div>
@@ -142,6 +162,17 @@
           <a href="https://rsrv.rest/en/akko/place/Roots-Akko">Roots (kosher meat)</a>
           <a href="https://akkoinfo.westgalil.org.il/en/article/directions-jnf-usa-western-galilee-information-center/">Getting there</a>
         </div>
+        <details class="sched">
+          <summary>📋 Read more — sample day schedule</summary>
+          <div class="row"><b>08:00</b> Train Tel Aviv → Akko (~1h40)</div>
+          <div class="row"><b>09:45</b> Bus 3A/4 to the Old City</div>
+          <div class="row"><b>10:00</b> Hospitaller Knights' Halls</div>
+          <div class="row"><b>11:00</b> Templar Tunnel, Al-Jazzar Mosque, Turkish Bazaar</div>
+          <div class="row"><b>12:30</b> Khan al-Umdan + sea walls / port</div>
+          <div class="row"><b>13:30</b> Lunch at Roots (Knights' Halls courtyard)</div>
+          <div class="row"><b>15:00</b> Free wander</div>
+          <div class="row"><b>~16:00</b> Bus to station → train home</div>
+        </details>
         <div class="vote">👍 Vote: “Option 2 — Akko”</div>
       </div>
     </div>
@@ -171,6 +202,17 @@
           <a href="https://www.visit-zichronyaakov.co.il/category/culinary/?lang=en">Visit Zichron</a>
           <a href="https://www.rome2rio.com/s/Binyamina-Station/Zikhron-Ya-aqov">Getting there</a>
         </div>
+        <details class="sched">
+          <summary>📋 Read more — sample day schedule</summary>
+          <div class="row"><b>08:00</b> Train Tel Aviv → Binyamina (~50 min)</div>
+          <div class="row"><b>09:00</b> Bus 70 up to Zichron (~7 min)</div>
+          <div class="row"><b>09:30</b> Midrachov + First Aliyah Museum</div>
+          <div class="row"><b>11:00</b> Nili/Aaronsohn House + Ohel Ya'akov Synagogue</div>
+          <div class="row"><b>12:30</b> Lunch at HaMeyasdim 16</div>
+          <div class="row"><b>14:00</b> Carmel Winery tour &amp; tasting (or Ramat HaNadiv)</div>
+          <div class="row"><b>~16:00</b> Bus to Binyamina → train home</div>
+          <div class="note">Check that your return train stops at Binyamina.</div>
+        </details>
         <div class="vote">👍 Vote: “Option 3 — Zichron”</div>
       </div>
     </div>
@@ -201,6 +243,16 @@
           <a href="https://www.burgeroad.co.il/">Burger Road (kosher meat)</a>
           <a href="https://culinar.co.il/dt_places/%D7%9E%D7%91%D7%A9%D7%9C%D7%AA-%D7%A9%D7%A8%D7%99%D7%92%D7%99%D7%9D/">Café Li-On (kosher dairy)</a>
         </div>
+        <details class="sched">
+          <summary>📋 Read more — sample day schedule</summary>
+          <div class="row"><b>08:30</b> Drive to the Elah Valley</div>
+          <div class="row"><b>10:00</b> Off-road ranger/jeep tour (keep to ~1–2 hrs)</div>
+          <div class="row"><b>12:00</b> Winery tour &amp; tasting (Ella Valley / Tzora)</div>
+          <div class="row"><b>13:30</b> Kosher lunch (Burger Road / Café Li-On)</div>
+          <div class="row"><b>15:00</b> Optional Srigim beer garden / Khirbet Qeiyafa</div>
+          <div class="row"><b>~16:30</b> Drive back</div>
+          <div class="note">A short ride keeps the day within budget.</div>
+        </details>
         <div class="vote">👍 Vote: “Option 4 — Emek HaEla”</div>
       </div>
     </div>
@@ -229,6 +281,15 @@
           <a href="https://en.bishulon.co.il/private-events">Cooking Studio — events</a>
           <a href="https://www.bishulon.co.il/en/">Classes</a>
         </div>
+        <details class="sched">
+          <summary>📋 Read more — sample day schedule</summary>
+          <div class="row"><b>11:00</b> Meet at The Cooking Studio (central TLV)</div>
+          <div class="row"><b>11:30</b> Market shop ("Shuk &amp; Cook") or knife-fight prep</div>
+          <div class="row"><b>12:30</b> Hands-on cooking / cocktail mixing</div>
+          <div class="row"><b>14:00</b> Sit-down meal you made + wine &amp; beer</div>
+          <div class="row"><b>15:30</b> Wrap / optional stroll</div>
+          <div class="note">Fully indoor; an evening slot also works.</div>
+        </details>
         <div class="vote">👍 Vote: “Option 5 — Tel Aviv”</div>
       </div>
     </div>
@@ -257,6 +318,17 @@
           <a href="https://www.kkl-jnf.org/tourism-and-recreation/forests-and-parks/hula-lake-park/">Hula Lake Park</a>
           <a href="https://www.israel-in-photos.com/agamon-hula.html">Prices &amp; timing</a>
         </div>
+        <details class="sched">
+          <summary>📋 Read more — sample day schedule</summary>
+          <div class="row"><b>06:30</b> Early drive north (best for the birds)</div>
+          <div class="row"><b>09:00</b> Agamon HaHula — golf-cart loop (75 min)</div>
+          <div class="row"><b>10:30</b> Visitor center + crane viewing</div>
+          <div class="row"><b>12:00</b> Drive to Rosh Pina / Kiryat Shmona</div>
+          <div class="row"><b>12:30</b> Kosher lunch (Pina BaRosh / Eretz Canaan)</div>
+          <div class="row"><b>14:00</b> Optional Rosh Pina old town</div>
+          <div class="row"><b>~15:30</b> Drive back</div>
+          <div class="note">Cranes are best at dawn/sunset; it's a long drive.</div>
+        </details>
         <div class="vote">👍 Vote: “Option 6 — Emek HaHula”</div>
       </div>
     </div>
@@ -285,6 +357,15 @@
           <a href="https://www.caesarea.com/en/">Caesarea National Park</a>
           <a href="https://www.tripadvisor.com/Restaurant_Review-g297742-d3588908-Reviews-Crusaders_Restaurant-Caesarea_Haifa_District.html">The Crusaders (kosher)</a>
         </div>
+        <details class="sched">
+          <summary>📋 Read more — sample day schedule</summary>
+          <div class="row"><b>09:00</b> Drive to Caesarea (~45 min from TLV)</div>
+          <div class="row"><b>10:00</b> National Park — Roman theatre, Herod's palace</div>
+          <div class="row"><b>11:30</b> Crusader port &amp; fortress, harbour galleries</div>
+          <div class="row"><b>13:00</b> Lunch at The Crusaders (harbour)</div>
+          <div class="row"><b>14:30</b> Aqueduct beach / optional guided tour</div>
+          <div class="row"><b>~16:00</b> Drive back</div>
+        </details>
         <div class="vote">👍 Vote: “Option 7 — Caesarea”</div>
       </div>
     </div>
@@ -313,6 +394,17 @@
           <a href="https://www.touristisrael.com/tours/jerusalem-machane-yehuda-market-tour-cooking-workshop/">Workshop + tour</a>
           <a href="https://harrysbaked.com/mahane-yehuda-market-food-tour/">Harry's Baked (kosher)</a>
         </div>
+        <details class="sched">
+          <summary>📋 Read more — sample day schedule</summary>
+          <div class="row"><b>08:30</b> Fast train Tel Aviv → Jerusalem-Yitzhak Navon (~35 min)</div>
+          <div class="row"><b>09:15</b> Light rail to Machane Yehuda</div>
+          <div class="row"><b>09:30</b> Chef workshop — shop the shuk</div>
+          <div class="row"><b>10:30</b> Cook (or a kosher tasting tour)</div>
+          <div class="row"><b>12:30</b> Sit-down meal</div>
+          <div class="row"><b>14:00</b> Old City / Tower of David</div>
+          <div class="row"><b>~16:30</b> Train home</div>
+          <div class="note">Sun–Thu (tours don't run Fri/Sat).</div>
+        </details>
         <div class="vote">👍 Vote: “Option 8 — Jerusalem”</div>
       </div>
     </div>
@@ -341,6 +433,15 @@
           <a href="https://jamiegeller.com/travel/israel/jaffa-where-ancient-meets-modern-a-kosher-travelers-guide/">Kosher Jaffa guide</a>
           <a href="https://www.tripadvisor.com/Attraction_Review-g297749-d324039-Reviews-Jaffa_Flea_Market-Jaffa_Tel_Aviv_Tel_Aviv_District.html">Flea market</a>
         </div>
+        <details class="sched">
+          <summary>📋 Read more — sample day schedule</summary>
+          <div class="row"><b>10:00</b> Train to TLV + light rail/bus to Jaffa</div>
+          <div class="row"><b>10:30</b> Old Jaffa alleys, port &amp; Clock Tower</div>
+          <div class="row"><b>11:30</b> Shuk HaPishpeshim (flea market)</div>
+          <div class="row"><b>13:00</b> Kosher lunch (Hummus Danny / Goshen)</div>
+          <div class="row"><b>14:30</b> Galleries / optional guided tour / seafront</div>
+          <div class="row"><b>~16:00</b> Head back</div>
+        </details>
         <div class="vote">👍 Vote: “Option 9 — Jaffa”</div>
       </div>
     </div>
@@ -369,6 +470,15 @@
           <a href="https://www.streetartpartner.com/products/tel-aviv-graffiti-workshop">Graffiti workshop</a>
           <a href="https://grafitiyul.co.il/en/product/graffiti-tour-in-florentine-tel-aviv/">Grafitiyul</a>
         </div>
+        <details class="sched">
+          <summary>📋 Read more — sample day schedule</summary>
+          <div class="row"><b>10:30</b> Meet in Florentin</div>
+          <div class="row"><b>11:00</b> Guided street-art tour</div>
+          <div class="row"><b>12:00</b> Graffiti / spray-paint workshop (~2 hrs)</div>
+          <div class="row"><b>14:00</b> Kosher lunch nearby</div>
+          <div class="row"><b>15:30</b> Wrap / Florentin cafés</div>
+          <div class="note">Includes an outdoor walking segment.</div>
+        </details>
         <div class="vote">👍 Vote: “Option 10 — Florentin”</div>
       </div>
     </div>
@@ -397,6 +507,16 @@
           <a href="https://www.digforaday.com/">Dig for a Day</a>
           <a href="https://www.burgeroad.co.il/">Kosher meat nearby</a>
         </div>
+        <details class="sched">
+          <summary>📋 Read more — sample day schedule</summary>
+          <div class="row"><b>08:30</b> Drive to Beit Guvrin (~1 hr from TLV)</div>
+          <div class="row"><b>10:00</b> "Dig for a Day" excavation (2.5–3 hrs) + bell caves</div>
+          <div class="row"><b>13:00</b> Drive ~15 min to Srigim</div>
+          <div class="row"><b>13:30</b> Kosher lunch (Burger Road / Café Li-On)</div>
+          <div class="row"><b>15:00</b> Optional Elah Valley winery</div>
+          <div class="row"><b>~16:30</b> Drive back</div>
+          <div class="note">Sun–Fri; book the dig in advance.</div>
+        </details>
         <div class="vote">👍 Vote: “Option 11 — Beit Guvrin”</div>
       </div>
     </div>
@@ -425,6 +545,15 @@
           <a href="https://en.parks.org.il/reserve-park/en-gedi-nature-reserve/">Ein Gedi Reserve</a>
           <a href="https://www.israel.com/places/dead-sea/restaurants">Kosher dining</a>
         </div>
+        <details class="sched">
+          <summary>📋 Read more — sample day schedule</summary>
+          <div class="row"><b>07:30</b> Early drive down (~2 hrs)</div>
+          <div class="row"><b>09:30</b> Ein Gedi Nature Reserve walk (waterfalls, ibex)</div>
+          <div class="row"><b>11:30</b> Kosher lunch at Kibbutz Ein Gedi</div>
+          <div class="row"><b>13:00</b> Dead Sea float / spa</div>
+          <div class="row"><b>~15:00</b> Head back</div>
+          <div class="note">Reserve closes 16:00 in November — start early.</div>
+        </details>
         <div class="vote">👍 Vote: “Option 12 — Ein Gedi”</div>
       </div>
     </div>
